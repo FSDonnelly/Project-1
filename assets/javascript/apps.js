@@ -49,7 +49,7 @@ var food = [];
       $("#food-view").append(imageDiv);
       // var imageDiv = $("<div id= 'food-view'>");
     var imageUrl = food[i].recipe.image;
-    var image = $("<img>").attr("src", imageUrl)
+    var image = $("<img>").attr("src", imageUrl, "class= 'image'")
     imageDiv.append(image);
     
     }

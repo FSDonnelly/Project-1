@@ -1,3 +1,9 @@
 body {
     background-color: lightblue;
 }
+#image{
+    justify-content: space-around;
+    float: left;
+    height: 200px;
+    width: 200px;
+}
