@@ -1,16 +1,29 @@
 body {
-    background-color: lightblue;
+    background-image: url("../imgs/foodbg-50-darker.png");
 }
-p {
-    background-color: lightgreen;
-}
-ol {
-    background-color:white;
+
+.jumbotron {
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -10px;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
 
 }
-#food-view{
-    justify-content: space-around;
-    float: left;
-    height: 200px;
-    width: 200px;
+
+.bg-light {
+    background-color: #000;
+}
+#footer {
+   
+    background-repeat: no-repeat;
+    background-position-y: -630px;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
+}
+.row{
+    margin-left: 0;
 }
