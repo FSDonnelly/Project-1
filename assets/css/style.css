@@ -1,3 +1,16 @@
 body {
     background-color: lightblue;
 }
+p {
+    background-color: lightgreen;
+}
+ol {
+    background-color:white;
+
+}
+#food-view{
+    justify-content: space-around;
+    float: left;
+    height: 200px;
+    width: 200px;
+}
