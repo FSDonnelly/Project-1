@@ -51,6 +51,16 @@ var food = [];
     var imageUrl = food[i].recipe.image;
     var image = $("<img>").attr("src", imageUrl, "class= 'image'")
     imageDiv.append(image);
+    // append label of food to image
+    var label = food[i].recipe.label;
+    var pOne = $("<p>").text(label);
+    imageDiv.append(pOne);
+    // append ingredients to image
+    var ingredients = food[i].recipe.ingredientLines;
+    var pTwo = $("<ol>").text(ingredients);
+    imageDiv.append(pTwo);
+    // append nutrtion to image
+   
     
     }
     

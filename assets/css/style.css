@@ -1,7 +1,14 @@
 body {
     background-color: lightblue;
 }
-#image{
+p {
+    background-color: lightgreen;
+}
+ol {
+    background-color:white;
+
+}
+#food-view{
     justify-content: space-around;
     float: left;
     height: 200px;
