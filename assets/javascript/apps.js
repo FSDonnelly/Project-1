@@ -22,11 +22,15 @@ var recipies;
 var food = [];
   // Function for displaying food data
   function searchImage() {
+   // console.log("hello")
+    $("#food-view").empty();
+
     // Deleting the food buttons prior to adding new food buttons
     // (this is necessary otherwise we will have repeat buttons)
-    $(".row").empty();
+    //$(".row").empty();
     // Looping through the array of foods
     for (var i = 0; i < food.length; i++) {
+
       // Then dynamicaly generating buttons for each food in the array.
       // This code $("<button>") is all jQuery needs to create the start and end tag. (<button></button>)
       // <div class="card" style="width: 18rem;">
@@ -41,7 +45,7 @@ var food = [];
     cardDiv.attr("style","width: 18rem;" );
     // var newCol = $("<div class= 'col-md-2' >");
     var imageUrl = food[i].recipe.image;
-    console.log(imageUrl);
+   // console.log(imageUrl);
    ;
     var image =$("<img>").attr( 'src', imageUrl);
     image.addClass("card-img-top");
@@ -85,7 +89,7 @@ var food = [];
     // This line will grab the text from the input box
     var foods = $("#user-input").val().trim();
     // The food from the textbox is then added to our array
-    console.log(foods);
+    //console.log(foods);
     // calling searchImage which handles the processing of our food array
     var recipieUrl = `https://api.edamam.com/search?q=${foods}&app_id=${recipieId}&app_key=${recipieKey}`;
 
@@ -94,14 +98,14 @@ $.ajax({
     method:  "GET"
   })
   .then(function(res) {
-    console.log(res);
+  
     var i;
     // recipies = res.hits[i];
     // var image =r
     // console.log(food)
     // food.push(image);
-    food = food.concat(res.hits);
-    console.log(food)
+    food = res.hits;
+    console.log(res.hits);
     console.log(food[0].recipe.image);
     
    
@@ -112,3 +116,11 @@ $.ajax({
   });
   // Calling the searchImage function at least once to display the initial list of foods
   // searchImage();
+
+  document.addEventListener("click", function(evt)
+  {
+   // alert(evt.target);
+
+  }
+  
+  );
