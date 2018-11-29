@@ -71,10 +71,10 @@ var food = [];
     // append nutrtion to image
    cardButton.on("click",function(e) {
       e.preventDefault();
-      var numIndex = $(this).attr("data-indexnum");
-      var foodName = $(this).attr("data-food-name");
-      localStorage.setItem("indexNum", numIndex);
-      localStorage.setItem("food-name", foodName);
+      // var numIndex = $(this).attr("data-indexnum");
+      // var foodName = $(this).attr("data-food-name");
+      localStorage.setItem('food',JSON.stringify(food) );
+      // localStorage.setItem("food-name", foodName);
       window.location.href='info.html';
      
       // console.log(this);
