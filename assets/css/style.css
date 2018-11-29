@@ -8,7 +8,7 @@ body {
     background-position: center;
     background-position-y: -10px;
     background-size: cover;
-    background-color: #000;
+    background-color: darkolivegreen;
     color: #fff;
 
 }
@@ -21,9 +21,19 @@ body {
     background-repeat: no-repeat;
     background-position-y: -630px;
     background-size: cover;
-    background-color: #000;
+    background-color: darkolivegreen;
     color: #fff;
 }
 .row{
     margin-left: 0;
+}
+.card {
+    justify-content: space-around;
+}
+
+.modal-fade {
+    position: absolute;
+}
+.table {
+    background-color: white;
 }
