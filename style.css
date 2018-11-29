@@ -1,0 +1,29 @@
+body {
+    background-color: darkred;
+    color: #fff;
+}
+
+.container {
+}
+
+#zomato {
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    margin-top: 10px;
+}
+
+#rest-item {
+    float: left;
+    text-align: center;
+    background-color: firebrick;
+    border: 3px solid darkred;
+    padding:10px;
+}
+
+.rest-location {
+    margin-top: 10px;
+}
+
+.rest-div {
+    background-color: rgb(150, 49, 49);
+}
