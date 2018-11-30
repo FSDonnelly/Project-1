@@ -1,47 +1,37 @@
-/* body {
-    background-color: lightblue;
+body {
+    /* background-image: url("../imgs/foodbg-50-darker.png"); */
+    padding-bottom: 120px;
+    /* margin-bottom: 60px; */
+}
+.container {
 }
 
-p {
-    background-color: lightgreen;
-    
-  
-}
-ol {
-    background-color:white;
-    
-
-}
-#food-view{
-    /* justify-content: space-around; */
-   
-    margin: 20px;
-   
+.jumbotron {
+    margin-top: 10px;
 }
 
-
-/* #image{
-    width:200px;
-    height: 200px;
-    float: left;
-     
-    
-
-} */ 
-/* #label{
-    clear: both;
-  
-} */
-
-/* .card{
-  
-   display: inline-block;
-   width: 200px;
-   heig
+#displayResults {
+    /* float: left;
+    display: flex; */
+    text-align: center;
+    background-color: firebrick;
+    border: 2px solid darkred;
+    padding:10px;
 }
-body{
-    background: blue;
-} */
-.row{
-    margin-left: 0;
+
+.verticalList {
+    /* white-space: pre; */
 }
+
+/* pls keep, this is the fix for index.html bootstrap sticky footer not sticking -k */
+#force-height {
+    height: 250px;
+}
+
+#footer {
+}
+
+/* pls keep, this is the fix for overlapping bootstrap sticky footer -k */
+.push {
+    height: 50px;
+  }
