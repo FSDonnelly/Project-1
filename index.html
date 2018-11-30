@@ -2,37 +2,126 @@
 <html lang="en">
 
 <head>
-  <title>Zomato Restaurant Search</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Food Website</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
 
-  <!-- Resert & Optional CSS -->
-  <link rel="stylesheet" href="../zomato-kat/reset.css">
-  <link rel="stylesheet" href="../zomato-kat/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- Optional CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
 
 <body>
-  <div class="container">
-    <!-- Pulling from Zomato API -->
-    <div class="col-md-12" id="zomato">
+    <!-- Contents -->
+    <div class="container">
+        <div id="edamam-badge" data-color="white"></div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">bon appéEAT</a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" id="user-input" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search-input">Search</button>
+                </form>
+            </div>
+        </nav>
+
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+                to featured content or information.</p>
+            <!-- <div class="input-group input-group-lg">
+                <div class="input-group-prepend"> -->
+            <!-- <span class="input-group-text" id="food-input">Large</span> -->
+            <!-- <input id="food-input" type="submit" value="Submit">
+                </div> -->
+            <!-- <input type="text" id= "food-input" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+            </div> -->
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <div class="row">
+                <div class="col-md-3">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Vegetarian</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Vegan</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Nut-Free</a>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="lead">
+                        <a class="btn btn-primary btn-lg" href="#" role="button">Gluten-Free</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <br> <br>
+
+        <!-- First Row Main Contents -->
+        <div class="row" id="food-view">
+            <div class="col-md-2">
+
+            </div>
+        </div>
+
+        <!-- Footer -->
+
+        <div class="card text-center" id="footer">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">
+
+            </div>
+        </div>
+
+
     </div>
-  </div>
+    <!-- Optional JavaScript -->
 
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://developer.edamam.com/attribution/badge.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
-
-  <!-- Optional JavaScript -->
-  <script src="../zomato-kat/app.js"></script>
-
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://developer.edamam.com/attribution/badge.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/apps.js"></script>
 </body>
 
 </html>
