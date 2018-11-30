@@ -207,7 +207,7 @@ $(document).on("click", ".videoBtn", function () {
   var index = $(this).attr("index");
   var queryURL =
     "https://www.googleapis.com/youtube/v3/search?q=" +
-    name +
+    name + "&order=relevance" + "&maxResults=3" + 
     "&part=snippet&key=AIzaSyDRoM4iF7sZ807Iv__tG3KzEa2hRNBXHbM";
 
   $.ajax({
