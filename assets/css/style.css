@@ -1,43 +1,37 @@
 body {
-    background-image: url("../imgs/foodbg-50-darker.png");
+    /* background-image: url("../imgs/foodbg-50-darker.png"); */
+    padding-bottom: 120px;
+    /* margin-bottom: 60px; */
+}
+.container {
 }
 
 .jumbotron {
-   
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: -10px;
-    background-size: cover;
-    background-color: darkolivegreen;
-    color: #fff;
-
+    margin-top: 10px;
 }
 
-.bg-light {
-    background-color: #000;
+#displayResults {
+    /* float: left;
+    display: flex; */
+    text-align: center;
+    background-color: firebrick;
+    border: 2px solid darkred;
+    padding:10px;
 }
+
+.verticalList {
+    /* white-space: pre; */
+}
+
+/* pls keep, this is the fix for index.html bootstrap sticky footer not sticking -k */
+#force-height {
+    height: 250px;
+}
+
 #footer {
-   
-    background-repeat: no-repeat;
-    background-position-y: -630px;
-    background-size: cover;
-    background-color: darkolivegreen;
-    color: #fff;
-}
-.row{
-    margin-left: 0;
-}
-.card {
-    justify-content: space-around;
 }
 
-.modal-fade {
-    position: absolute;
-}
-.table {
-    background-color: white;
-}
-
-h1, label{
-    color: white;
-}
+/* pls keep, this is the fix for overlapping bootstrap sticky footer -k */
+.push {
+    height: 50px;
+  }
