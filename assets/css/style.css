@@ -34,4 +34,31 @@ body {
 /* pls keep, this is the fix for overlapping bootstrap sticky footer -k */
 .push {
     height: 50px;
-  }
+    background-image: url("../imgs/foodbg-50-darker.png");
+}
+
+.jumbotron {
+   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -10px;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
+
+}
+
+.bg-light {
+    background-color: #000;
+}
+#footer {
+   
+    background-repeat: no-repeat;
+    background-position-y: -630px;
+    background-size: cover;
+    background-color: #000;
+    color: #fff;
+}
+.row{
+    margin-left: 0;
+}
