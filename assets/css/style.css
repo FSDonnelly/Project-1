@@ -37,3 +37,7 @@ body {
 .table {
     background-color: white;
 }
+
+h1, label{
+    color: white;
+}

@@ -140,8 +140,8 @@ $(document).ready(function () {
     // Code for handling the push
     database.ref().push({
       recipeName: recipeName,
-      destination: destination,
-      firstTrain: firstTrain,
+      ingredients: ingredients,
+      instructions: instructions,
       image: image,
     });
 
@@ -152,7 +152,7 @@ $(document).ready(function () {
       var newRecipeName  = childSnapshot.val().recipeName;
       var newIngredients = childSnapshot.val().ingredients;
       var newInstructions = childSnapshot.val().instructions;
-      var newimage = childSnapshot.val().image;
+      var newImage = childSnapshot.val().image;
 
 
       // Display On Page
@@ -160,7 +160,7 @@ $(document).ready(function () {
         ' <tr><td>' + newRecipeName +
         ' </td><td>' + newIngredients +
         ' </td><td>' + newInstructions +
-        ' </td><td>' + newimage + '</td></tr>');
+        ' </td><td>' + newImage + '</td></tr>');
 
       // Clear input fields
       $("#recipe-name, #ingredients, #instructions, #image").val("");
