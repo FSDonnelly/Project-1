@@ -62,3 +62,7 @@ body {
 .row{
     margin-left: 0;
 }
+
+.card {
+    height: 100%;
+}
