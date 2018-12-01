@@ -66,3 +66,7 @@ body {
 .image-card {
     height: 100%;
 }
+
+.f-card {
+    display: inline-block;
+}

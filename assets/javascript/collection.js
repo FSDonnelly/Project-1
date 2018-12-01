@@ -18,12 +18,25 @@ database.ref().on("child_added", function (snapshot) {
   console.log(snapshot);
   console.log(snapshot.val());
   var content = snapshot.val();
-  console.log(content.title);
-  var newRow = $("<div>");
-  newRow.addClass("border m-4 p-3");
-  newRow.html("<h1>" + content.title + "</h1>" + "<img src='" + content.image + "' />" +
-    "<p>" + content.healthLabel + "[<i>" + content.dietLabel + "</i>]</p>" + "<p>Total Calories: " + content.calories + "/person</p>"
-    + "<a href ='" + content.url + "'>" + content.url + "</a>");
+  console.log("content", content);
 
-  $("#collection-list").prepend(newRow);
+
+  if (typeof content.title !== "undefined") {
+    var newCol = $("<div>").addClass("col-md-4");
+
+    var newCard = $("<div>").addClass("card border-1 f-card mr-3 mb-3");
+    newCard.attr("style", "width: 100%; height: 95%");
+    var newImg = $("<img>").addClass("card-img-top");
+    newImg.attr("src", content.image);
+    var newCardBody = $("<div>").addClass("card-body");
+    newCardBody.html("<h5>" + content.title + "</h5>" +
+      "<p>" + content.healthLabel.replace(/,/g, " ") + "[<i>" + content.dietLabel + "</i>]</p>" +
+      "<p>Total Calories: " + content.calories + "/person</p>" +
+      "<a href ='" + content.url + "' target='_blank'>" + content.url + "</a>");
+
+    newCard.append(newImg, newCardBody);
+    newCol.append(newCard);
+    $("#collection-list").prepend(newCol);
+  };
+
 });
