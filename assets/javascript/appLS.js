@@ -25,7 +25,7 @@ var database = firebase.database();
 
 // edamam url base
 var queryURLBase =
-  "http://api.edamam.com/search?from=0&to=20&app_id=" +
+  "https://cors-anywhere.herokuapp.com/http://api.edamam.com/search?from=0&to=20&app_id=" +
   apiId +
   "&app_key=" +
   apiKey;
@@ -168,7 +168,8 @@ function runQuery(numSearch, queryURL) {
 }
 var searchItems = [];
 
-$("#searchBtn").on("click", function () {
+$("#form-id").on("submit", function (e) {
+  e.preventDefault();
   chosenSearch = [];
 
   searchTerm = $("#searchTerm")
@@ -183,7 +184,8 @@ $("#searchBtn").on("click", function () {
   localStorage.setItem("searchItems", JSON.stringify(searchItems));
   var newURL = queryURLBase + "&q=" + searchTerm;
   runQuery(parseInt(numResults), newURL);
-  return true;
+  window.location.href="recipes.html";
+  
 });
 
 $(document).on("click", ".instructionBtn", function () {
