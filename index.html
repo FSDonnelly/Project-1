@@ -10,11 +10,12 @@
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
+    <!-- Summernote -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.css" rel="stylesheet">
 
     <!-- Optional CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css"> -->
 </head>
 
 <body>
@@ -77,13 +78,45 @@
                 </div>
             </div>
         </div>
+
+        <!-- Four images as example -->
+        <div class="row mt-4">
+            <div class="col-md-3">
+                <div class="image-card text-center">
+                    <img class="card-img-top" src="https://www.edamam.com/web-img/e12/e12b8c5581226d7639168f41d126f2ff.jpg">
+                    <div class="card-body">
+                        Chicken Vesuvio
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-card text-center">
+                    <img class="card-img-top" src="https://www.edamam.com/web-img/5dd/5ddf535fc4a5e527131a63362787a83c.jpg">
+                    <div class="card-body">
+                        Beef Cheek Confit
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-card text-center">
+                    <img class="card-img-top" src="https://www.edamam.com/web-img/fd8/fd8b79f3ccfdde9d0953ceeadddbb324.jpg">
+                    <div class="card-body">
+                        Green Curry Dumplings
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="image-card text-center">
+                    <img class="card-img-top" src="https://www.edamam.com/web-img/f05/f056869d868a4e45b01b84c5d37512ba.jpg">
+                    <div class="card-body">
+                        Grilled Lettuce Pizza
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <br>
-        <br>
-        <!-- <div class="row">
-            <div class="col-md-12" id="force-height"></div>
-        </div> -->
-       
-       <!-- user can upload thier Recipes here  -->
+        <!-- user can upload thier Recipes here  -->
         <div class="row">
             <div class="col-md-12 ">
                 <div class="card">
@@ -91,26 +124,26 @@
                         Upload Your Recipe
                     </div>
                     <div class="card-body">
-        
-        
-        
-                        <form  method="post">
+
+
+
+                        <form method="post">
                             <div class="form-group">
                                 <label for="usr"> Name </label>
                                 <input type="text" class="form-control" id="usr" placeholder="Enter your Name">
                             </div>
-        
+
                             <div class="form-group">
                                 <label for="pwd"> Email </label>
                                 <input type="email" class="form-control" id="eml" placeholder="Enter Your Email">
                             </div>
-        
-                            <div class="form-group" >
-                                              
+
+                            <div class="form-group">
+
                                 <label for="message"> Recipes </label>
                                 <textarea id="summernote" name="editordata" class="form-control" rows="3" id="message"></textarea>
                             </div>
-                            
+
                             <div>
                                 <button type="submit" class="btn btn-primary">Upload</button> </div>
                         </form>
@@ -119,42 +152,40 @@
             </div>
         </div>
         <!-- End Contents -->
-    </div>
-    <!-- Footer -->
-    <br>
-    <div class="card text-center" id="footer">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-        <div class="card-footer text-muted">www.bonappeeat.com
-        </div>
-    </div>
-    <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-        crossorigin="anonymous"></script>
-    <!-- Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
-    <!-- Moment wtf for idk, just leave for now -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <!-- Custom JavaScript -->
-    <script src="assets/javascript/appLS.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.js"></script>
-    <script>
-            $(document).ready(function() {
-                $('#summernote').summernote();
-            });
-          </script>
+        <!-- Footer -->
+        <br>
+        <div class="card text-center" id="footer">
+            <div class="card-header">
+                Featured
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+            <div class="card-footer text-muted">www.bonappeeat.com
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <!-- <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.9/firebase.js"></script>
+        <!-- Moment wtf for idk, just leave for now -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote-lite.js"></script>
+    
+
+        <!-- Custom JavaScript -->
+        <script src="assets/javascript/appLS.js"></script>
+       
 </body>
 
 </html>
